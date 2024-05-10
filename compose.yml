@@ -1,0 +1,24 @@
+services:
+  mc:
+    image: itzg/minecraft-server
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "true"
+      VIEW_DISTANCE: "18"
+      ALLOW_FLIGHT: "TRUE"
+      ENABLE_AUTOPAUSE: "TRUE"
+      MAX_TICK_TIME: -1
+      TYPE: AUTO_CURSEFORGE
+      INIT_MEMORY: "2G"
+      MAX_MEMORY: "6G"
+      CF_API_KEY: ${CF_API_KEY}
+      CURSEFORGE_FILES:
+        https://www.curseforge.com/minecraft/mc-mods/luna
+      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/prominence-2-rpg
+    ports:
+      - "25565:25565"
+    restart: unless-stopped
+
+    volumes:
+      - ./data:/data
