@@ -14,10 +14,12 @@ services:
       MAX_MEMORY: "6G"
       CF_API_KEY: ${CF_API_KEY}
       CURSEFORGE_FILES:
-        https://www.curseforge.com/minecraft/mc-mods/luna
+        https://www.curseforge.com/minecraft/mc-mods/luna,
+        https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat/files/5329150
       CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/prominence-2-rpg
     ports:
       - "25565:25565"
+      - "24454:24454"
     restart: unless-stopped
 
     volumes:
