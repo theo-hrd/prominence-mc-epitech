@@ -9,9 +9,11 @@ services:
       ALLOW_FLIGHT: "TRUE"
       ENABLE_AUTOPAUSE: "TRUE"
       MAX_TICK_TIME: -1
+      DIFFICULTY: "normal"
       TYPE: AUTO_CURSEFORGE
       INIT_MEMORY: "2G"
       MAX_MEMORY: "6G"
+      OPS: "TwentyHxte"
       CF_API_KEY: ${CF_API_KEY}
       CURSEFORGE_FILES:
         https://www.curseforge.com/minecraft/mc-mods/luna,
